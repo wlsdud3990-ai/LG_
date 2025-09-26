@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LG전자-랜딩페이지 구현</title> 
+  <link rel="shortcut icon" type="image/x-icon" href="./02_images/favicon (2).ico" />
+
+  <!-- 1. css초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+
+  <!-- 2. 아이콘 - 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- 4. 공통서식 - 글자모양, 크기, 색상, 레이아웃 -->
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <!-- 5. 메인 콘텐츠 서식 -->
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- 검색박스 -->
+  <form name="폼이름" method='get' action='받을서버주소'>
+
+    <!-- 상단 헤더영역 시작 -->
+    <header id="header" class="black_bg">
+      <div id="h_top">
+        <fieldset id="search_box">
+          <input type="search" placeholder="검색어 입력" id="search">
+          <label for="search"><i class="fas fa-search"></i></label>
+        </fieldset>
+
+        <nav class="gnb_etc">
+          <ul>
+            <li>
+              <a href="https://kr.lgemembers.com/lgacc/service/v1/keycloak/signin?kc_state=B0C2akRA_LyD6oMmVCfd4Xo6O5jH44WoV3gDqKcBmBy8lcFioflbm_2UWpODFduYj492zEZbyk4CM723AB6VdgqsahVQi1WZ0NxKnu-Ey7fxqtWHT6pSogenSViB-BmQjyX58QkXZBGteiaSPVPNtq74Pmht0CBI9XqTSYIzzfcbhUgqpkGM3cXN0uaSNC1srfHCCO6QOoJSgBBQLkJjnTLSQiyuKViXfBHLTE35xOEV_biqdRTq1WJpaB_SOp2ndnkAh1iC1oG_V4Pb0KKHpjmjaDJg963WSHYd0nUiurMy7OBM9nM8yP_-uv-n_-3wQBPdAhNJ_ezf6inTxtngEg&nonce=Auc-E3xcbbRAD0OMSOxSpg&country=KR&language=ko&svc_code=SVC612&division=1&callback_url=https%3A%2F%2Faccount.lge.co.kr%2Fsns%2FcallbackEmpLogin&close_type=2&pre_login=N&selCntryYn=N&client_redirect_uri=https%3A%2F%2Faccount.lge.co.kr%2Flogin%2Fcallback%2FnthLogin"
+                title="마이페이지 바로가기">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <select name="lang" id="lang">
+                <option value="KOREAN">한국/한국어</option>
+                <option value="ENGLISH">the United States/English</option>
+                <option value="CHINESE">中國/中國語</option>
+                <option value="JAPANESE">日本/日本語</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="h_bottom">
+        <h1>
+          <a href="index.html" title="메인페이지로 바로가기">
+            <img src="./02_images/로고/logo01.png.png" alt="상단로고">
+          </a>
+        </h1>
+
+        <!-- 메인메뉴 -->
+        <nav id="gnb">
+          <ul>
+            <li><a href="#cont1" title="기업소개">기업소개</a>
+              <ul class="sub">
+                <li><a href="#" title="Mission">Mission</a></li>
+                <li><a href="#" title="Vision">Vision</a></li>
+                <li><a href="#" title="Core Value">Core Value</a></li>
+              </ul>
+            </li>
+            <li><a href="#cont2" title="혁신&기술">혁신&기술</a>
+            </li>
+            <li>
+              <a href="#cont3" title="연혁">연혁</a>
+              <ul class="sub">
+                <li><a href="#" title="창업의 시기">창업의 시기</a></li>
+                <li><a href="#" title="성장의 시기">성장의 시기</a></li>
+                <li><a href="#" title="국제화의 시기">국제화의 시기</a></li>
+                <li><a href="#" title="혁신의 시기">혁신의 시기</a></li>
+                <li><a href="#" title="도약의 시기">도약의 시기</a></li>
+                <li><a href="#" title="가치 창출의 시기">가치 창출의 시기</a></li>
+                <li><a href="#" title="고도화의 시기">고도화의 시기</a></li>
+              </ul>
+            </li>
+            <li><a href="#cont4" title="글로벌 네트워크">글로벌 네트워크</a>
+            </li>
+            <li><a href="#cont5" title="ESG">ESG</a>
+              <ul class="sub">
+                <li><a href="#" title="환경">환경</a></li>
+                <li><a href="#" title="사회">사회</a></li>
+                <li><a href="#" title="지배구조">지배구조</a></li>
+                <li><a href="#" title="ESG팩트북">ESG팩트북</a></li>
+                <li><a href="#" title="지속가능경영 보고서">지속가능경영 보고서</a></li>
+              </ul>
+            </li>
+            <li><a href="#cont6" title="사업 영역& 경영진">사업 영역& 경영진</a>
+              <ul class="sub">
+                <li><a href="#" title="HS 사업본부">HS 사업본부</a></li>
+                <li><a href="#" title="MS 사업본부">MS 사업본부</a></li>
+                <li><a href="#" title="VS 사업본부">VS 사업본부</a></li>
+                <li><a href="#" title="ES 사업본부">ES 사업본부</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 시작 -->
+    <main>
+      <section id="cont1" class="custom-section">
+        <h2>메인 베너</h2>
+        <div class="image-area">
+          <img src="./02_images/배너/banner.png" alt="상단 이미지" />
+        </div>
+        <p class="style01">Innovation for a better life</p>
+        <p class="style02">우리가 세상에 존재하는 이유이자, 고객과의 약속입니다.
+        </p>
+
+        <div class="dots-area01">
+          <a href="https://www.lge.co.kr/company/info/mission#com-tabs02" class="dot01">
+            <span class="style03">Mission</span><br>
+            <span class="style04">고객에게 더 나은 삶을 제공하는 기술</span>
+          </a>
+
+          <a href="https://www.lge.co.kr/company/info/company_vision#com-tabs02" class="dot02">
+            <span class="style03">Vision</span><br>
+            <span class="style04">글로벌 혁신 선도 기업</span>
+          </a>
+
+          <a href="https://www.lge.co.kr/company/info/value#com-tabs02" class="dot03">
+            <span class="style03">Core Value</span><br>
+            <span class="style04">정직, 혁신, 존중</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 2. 슬라이드 영역 -->
+      <section id="cont2" class="main-section">
+        <!-- 2. 슬라이더 위 텍스트 -->
+        <div class="chapter chapter1">
+          <h2>혁신 & 기술</h2>
+          <p class="subtitle">앞선 기술과 새로운 혁신으로 고객의 미래와 함께 나아갑니다.</p>
+        </div>
+
+
+        <div class="slider-section">
+          <!-- 슬라이더 위 버튼 -->
+          <a href="https://live.lge.co.kr/" class="slider-btn">자세히 알아보기</a>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./02_images/slide 사진/slide01.jpg.png" alt="사진 1"></div>
+              <div class="swiper-slide"><img src="./02_images/slide 사진/slide02.jpg.png" alt="사진 2"></div>
+              <div class="swiper-slide"><img src="./02_images/slide 사진/slide03.jpg.png" alt="사진 3"></div>
+              <div class="swiper-slide"><img src="./02_images/slide 사진/slide04.jpg.png" alt="사진 4"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cont3">
+        <!-- 2. 챕터2: 연혁 -->
+        <article class="chapter chapter2">
+          <h2>연혁</h2>
+          <ul class="box-list">
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">1958 - 금성사 창립</a>
+            </li>
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">1966~1980년대 - 국내 최초 전자제품
+                생산</a>
+            </li>
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">1995 - LG전자 출범</a>
+            </li>
+          </ul>
+          <ul class="box-list">
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">2000년대 - 휴대폰 및 디지털 가전
+                성장</a>
+            </li>
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">2010년대 - OLED TV 및 스마트 가전
+                선도</a>
+            </li>
+            <li>
+              <a href="https://www.lge.co.kr/company/info/history#com-tabs01" target="_blank">2021년 - 스마트폰 사업 철수 & 미래사업
+                전환</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+
+      <!-- 3. -->
+      <section id="cont4">
+        <div class="chapter chapter3">
+          <h2>글로벌 네트워크</h2>
+          <p class="subtitle">LG전자는 각 지역에 약 130여 개의 현지 법인을 설립해 운영하고 있으며 약 75,000여명의 임직원이 함께 일하고 있습니다.</p>
+
+          <!-- 지도 삽입 -->
+          <div class="map">
+            <a href="https://careers.lg.com/culture/workplace" class="glober map">
+              <img src="./02_images/map.png" alt="글로벌 지도">
+              <span class="hover-text">지도 내용을 확인하려면 클릭하세요.</span>
+            </a>
+          </div>
+      </section>
+
+
+      <section id="cont5" class="chapter3">
+
+        <h2>ESG & 지속가능성</h2>
+        <p class="subtitle">정도경영을 내재화하고 글로벌 기업시민으로서의 사회적 책무를 다하기 위해 노력하고 있습니다.</p>
+
+        <!-- 클릭 박스 3개 -->
+        <div class="esg-boxes">
+          <a href="https://www.lge.co.kr/company/sustainable/environment" class="esg-box">
+            <p>탄소중립2030</p>
+            <p>전사적 친환경 목표달성</p>
+            <img src="./03_icon/icon03.png" alt="환경 아이콘" class="box-icon">
+          </a>
+          <a href="https://www.lge.co.kr/company/promot/resourceCirculation#com-tabs02" class="esg-box">
+            <p>재활용 비용 50%</p>
+            <p>제품 원재료 재활용 목표</p>
+            <img src="./03_icon/icon04.png" alt="사회 아이콘" class="box-icon">
+          </a>
+          <a href="https://www.lge.co.kr/company/sustainable/social#com-tabs01" class="esg-box">
+            <p>사회공헌</p>
+            <p>글로벌 지역 사회와 함께 성장</p>
+            <img src="./03_icon/icon05.png" alt="지배구조 아이콘" class="box-icon">
+          </a>
+        </div>
+      </section>
+
+      <!-- 4. -->
+
+      <!-- 큰 네모 박스 4개 -->
+      <section id="cont6">
+        <div class="chapter chapter4">
+          <h2>사업 영역 & 경영진</h2>
+          <p class="subtitle">HS(Home Appliance Solution), MS(Media Entertainment Solution), VS(Vehicle Solution),
+            ES(Eco Solution)의
+            사업본부로 구성되어 있습니다.</p>
+
+
+          <div class="large-boxes">
+            <ul>
+              <li>
+                <a href="https://www.lge.co.kr/company/info/introduce" class="large-box">
+                  <img src="./02_images/사업 영역/business01.jpg" alt="HS 사업본부">
+                  <span class="box-text">HS 사업본부&nbsp;&nbsp;&#8599;</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lge.co.kr/company/info/introduce" class="large-box">
+                  <img src="./02_images/사업 영역/business02.jpg" alt="MS 사업본부">
+                  <span class="box-text">MS 사업본부&nbsp;&nbsp;&#8599;</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lge.co.kr/company/info/introduce" class="large-box">
+                  <img src="./02_images/사업 영역/business03.jpg" alt="VS 사업본부">
+                  <span class="box-text">VS 사업본부&nbsp;&nbsp;&#8599;</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lge.co.kr/company/info/introduce" class="large-box">
+                  <img src="./02_images/사업 영역/business04.jpg" alt="ES 사업본부">
+                  <span class="box-text">ES 사업본부&nbsp;&nbsp;&#8599;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <!-- 작은 박스 3개 -->
+          <div class="small-boxes">
+            <a href="https://www.lge.co.kr/company/info/management#com-tabs01" class="small-box">
+              <div class="left">
+                <p>CEO</p>
+                <img src="./03_icon/icon06.png" alt="ceo 아이콘" class="small-icon">
+              </div>
+              <div class="right01">
+                <p>
+                  "고객의 삶을 변화시키는 혁신의 리더!"<br>
+                  LG전자의 CEO는 ‘더 나은 삶’을 목표로 기술과 디자인을 혁신적으로 결합해,
+                  일상 속에서 고객에게 실질적인 가치를 제공합니다.
+                </p>
+              </div>
+            </a>
+
+            <a href="https://www.lge.co.kr/company/info/management#com-tabs01" class="small-box">
+              <div class="left">
+                <p>CFO</p>
+                <img src="./03_icon/icon07.png" alt="cfo 아이콘" class="small-icon">
+              </div>
+              <div class="right02">
+                <p>
+                  "안정적 성장과 스마트한 재무 전략의 전문가!"
+                  LG전자의 CFO는 철저한 재무 관리로 회사의 지속 가능한 성장을 위해
+                  재무를 안정적으로 관리하고, 미래를 위한 전략적 투자를 책임집니다.
+                </p>
+              </div>
+            </a>
+
+            <a href="https://www.lge.co.kr/company/info/management#com-tabs01" class="small-box">
+              <div class="left">
+                <p>CTO</p>
+                <img src="./03_icon/icon08.png" alt="cto 아이콘" class="small-icon">
+              </div>
+              <div class="right03">
+                <p>
+                  "미래 기술을 이끄는 혁신적인 선구자!"
+                  LG전자의 CTO는 AI, 5G, IoT 등 첨단 기술을 통해 ‘스마트한 삶’을 현실로 만듭니다.
+                  기술 혁신을 이끌며, 고객의 삶을 더 편리하게 만드는 LG전자의 미래 기술을 개발합니다.
+                </p>
+              </div>
+            </a>
+          </div>
+      </section>
+    </main>
+
+
+     <div class="sns-fixed">
+    <a href="https://www.facebook.com/lg" target="_blank" title="페이스북">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com/LG" target="_blank" title="트위터">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/lg" target="_blank" title="인스타그램">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>  
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+
+      <div>
+        <p><a href="https://www.lge.co.kr/sitemap" title="사이트맵">사이트맵</a> | <a
+            href="https://account.lge.co.kr/terms/emp/usedView" title="이용약관">이용약관</a> | <a
+            href="https://www.lge.co.kr/acceptable-use-policy" title="이메일 무단 수집거부">이메일 무단
+            수집거부</a> | <a href="https://account.lge.co.kr/terms/emp/detailView?tmsId=A_ITG_PRV_GDPR"
+            title="개인정보처리방침">개인정보처리방침</a> | <a href="https://ethics.lg.co.kr/index.do" title="정도 경영 사이버 신문고">정도 경영 사이버
+            신문고</a>
+        <p>&#169; 2025 LG Electronics Inc. | 서울특별시 영등포구 여의대로 128 LG트윈타워</p>
+      </div>
+    </footer>
+  </form>
+ 
+<!-- Top 버튼 -->
+<a href="#top" class="top-btn" id="top_btn">
+  <img src="./03_icon/icon01.png" alt="Top">
+</a>
+
+<!-- Chat 버튼 -->
+<a href="https://www.lge.co.kr/ai-commerce/aiAssistant" target="_blank" class="chat-btn" id="chat_btn">
+  <img src="./03_icon/icon02.png" alt="Chat">
+</a>
+
+  <!-- 스와이퍼 스크립트 -->
+
+  <script>
+
+    // top버튼 section1에서는 숨기기 
+    window.addEventListener("scroll", function () {
+      const topBtn = document.getElementById("top_btn");
+      const section1 = document.querySelector(".dots-area01");
+
+      if (window.scrollY < section1.offsetHeight) {
+        topBtn.classList.remove("show"); // 사라짐 (옆으로 빠짐)
+      } else {
+        topBtn.classList.add("show");  // 나타남 (옆에서 등장)
+      }
+    });
+
+
+    // 메인 슬라이드 이미지
+    const swiper = new Swiper('.mySwiper', {
+      cssMode: true,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: 'true',
+      },
+    });
+
+    // gnb에 마우스 오버 시 배경색 적용하기  
+    const gnb = document.getElementById('gnb');
+    const header = document.getElementById('header');
+    const scroll = header.offsetTop;
+
+    //gnb에 마우스 오버 시 배경색 적용하기
+    gnb.addEventListener('mouseenter', function () {
+      header.classList.add('black_bg');
+    });
+
+    //. 화면스크롤 시 .blac_bg 적용하기 / 제거하기
+    let docElem = document.documentElement,
+      offset, scrollPos, docHeight;
+
+    docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
+
+    if (docHeight != 0) {
+      offset = docHeight / 12;
+    }
+
+    //화면 스크롤 시 세로 스크롤 값을 출력해보기 
+    window.addEventListener('scroll', function () {
+      scrollPos = docElem.scrollTop;
+      console.log(scrollPos);
+
+      if (scrollPos >= 10) {
+        header.classList.add('black_bg');
+        header.addEventListener('mouseleave', function () {
+          header.classList.add('black_bg');
+        });
+      } else {//스크롤 높이기 그 밖에 높이가 되면 아래 서식을 적용(높이가 10이하)
+        header.addEventListener('mouseleave', function () {
+          header.classList.remove('black_bg');
+        });
+        header.classList.remove('black_bg');; //스크롤 높이가 10이상인 경우에서 헤더 배경색을 제거
+      }
+    });
+
+    //3. 메인메뉴 클릭 시 해당 아이디 박스요소가 스크롤 되면서 상단으로 올라오게 하기 
+    const menuLinks = document.querySelectorAll('#gnb > ul > li > a');
+
+    //반복문을 사용하여 각 링크에 이벤트를 적용하여 해당 섹션으로 이동하게 하기
+    //for(초기값;조건식;증감식){실행문}
+    for (let i = 0; i < menuLinks.length; i++) {
+      //클릭이벤트 
+      menuLinks[i].addEventListener('click', function (e) {
+        console.log(i);//0,1,2,3,4
+        e.preventDefault(); //기본 이벤트 클릭을 제거한다. 새로고침이 안되도록 한다.
+
+        //href값(#con1, #con2, #con3, #con4, #con5)으로 이동할 section을 찾는다.
+        // 속성값을 변수에 담는다. 
+        const targetId = this.getAttribute('href').substring(1);
+        //위에서 저장된 변수값을 id값으로 저장 
+        const targetSection = document.getElementById(targetId);
+
+        //id값 출력해보기
+        console.log(targetSection); //section출력
+
+        let headerHeight = 80; // 기본값
+        if (targetId === "cont2") headerHeight = 250;
+        if (targetId === "cont3") headerHeight = 380;
+        if (targetId === "cont4") headerHeight = 330;
+        if (targetId === "cont5") headerHeight = 320;
+        if (targetId === "cont6") headerHeight = 200;
+        //헤더 영역 높이만큼 값 설정
+
+        //각 선택한 section이 부드럽게 상단으로 올라오게 하기
+        window.scrollTo({
+          top: targetSection.offsetTop - headerHeight, //선택한 section상단 위치와 브라우저 상단과 동일한 위치로 이동
+          behavior: 'smooth' //부드럽게 이동한다.
+        });
+      });
+    }
+
+  </script>
+</body>
+</html>

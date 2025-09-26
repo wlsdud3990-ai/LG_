@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+main{
+  
+}
+/* 메인 배너 */
+.custom-section {
+  width: 100%;
+  text-align:center;
+}
+
+.image-area img {
+  max-width: 100%;
+  height: auto;
+}
+
+#cont1{padding-top:138px;}
+#cont1 > h2{display:none;}
+#cont1, #cont2, #cont3, #cont4, #cont5, #cont6{
+  width:1440px;
+  margin: 0px auto; /* 화면 중앙에 콘텐츠 배치 */
+}
+#cont1{  
+  height:900px;}
+#cont2{
+  height:560px;}
+#cont3{
+  height:260px;}
+#cont4{
+  height:580px;}
+#cont5{
+  height:380px;}
+#cont6{
+  height:900px;}
+
+/* 두번째 section */
+
+.chapter {
+  margin: 40px 0 25px 0px; /* 챕터간 간격 */
+  /* text-align: center; */
+}
+
+.chapter1{
+  margin-top: -20px;
+}
+
+.chapter2{
+  width:100%;
+  margin: 100px 0 0 140px;
+}
+.chapter2 > h2{
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin: 0 0 30px 110px;
+  padding-right: 40px;       /* 글자와 선 사이 간격 */
+  font-size: 2rem;
+  vertical-align: top;
+  transform: translateX(-210px);  
+}
+
+.chapter2 h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;   /* 글자 끝에 붙이기 */
+  width: 2px;  /* 선 두께 */
+  height: 140px; /* 원하는 선 길이 */
+  background-color: #f04646;  /* 붉은색 */
+  border-radius: 2px;       /* 살짝 둥글게 */
+}
+.chapter2 > ul:first-of-type{
+margin-left: 28px;
+}
+.chapter2 > ul {
+  display: inline-block;     /* flex 제거 */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.chapter2 > ul > li {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  margin: 10px 10px; /* li 사이 간격 */
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* 호버 효과 */
+.chapter2 > ul > li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* 세번째 section */
+
+.chapter3 .map {
+  width: 700px;
+  margin: 20px auto 60px; 
+  /* 위 50px, 좌우 auto(가운데), 아래 160px */
+  text-align: center;      
+}
+
+.map a {
+  position: relative; /* 글씨 위치를 이미지 위에 배치하기 위해 */
+  display: inline-block;
+}
+
+.map img {
+  display: block;
+  width: 100%; /* 필요 시 크기 조정 */
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(245, 60, 162, 0.658);
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none; /* 글씨에 마우스 이벤트가 걸리지 않도록 */
+}
+
+.map a:hover .hover-text {
+  opacity: 1; /* 호버 시 글씨 표시 */
+}
+
+.chapter3 .esg-boxes {
+  display: flex;
+  justify-content: center; /* 3개 박스 중앙 배치 */
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.chapter3 .esg-box {
+  min-height: 80px; /* 원하는 이전 높이로 설정 */
+  line-height: 2;
+  width: 270px; 
+  display: inline-block;
+  position: relative;
+  padding: 25px 30px;
+  background-color: #f2f2f2;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s;
+
+}
+
+/* 첫 번째 p 태그 (제목) */
+.chapter3 .esg-box  p:first-of-type {
+  font-size: 19px;
+  margin-top: 27px;
+}
+
+/* 두 번째 p 태그 (설명) */
+.chapter3 .esg-box  p:last-of-type {
+  font-size: 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+
+.chapter3 .esg-box:hover {
+  background-color: hwb(81 38% 4%);
+  transform: translateY(-5px);
+}
+
+
+/* 아이콘 위치 */
+.chapter3 .esg-box .box-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 70px;  /* 아이콘 크기 */
+  height: 70px;
+}
+
+/* 세번째 section */
+
+/* 큰 박스 4개 */
+.chapter4 .large-box {
+  position: relative; /* 글씨 위치 기준 */
+  height: 300px;
+  margin: 30px 0;
+  overflow: hidden;
+  border-radius: 12px;
+  display: inline-block;
+  text-decoration: none;
+  }
+
+.chapter4 .large-boxes ul {
+  width: 1280px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between; /* 3개 박스 중앙 배치 */
+}
+.chapter4 .large-boxes ul li{
+ width:24%;
+ overflow:hidden;
+}
+
+.chapter4 .large-box img {
+  width: 200%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+/* 이미지 중앙에 글씨 */
+.chapter4 .large-box .box-text {
+  position: absolute;
+  top: 89%;         
+  left: 36%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* hover 효과 */
+.chapter4 .large-box:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+.chapter4 .large-box:hover .box-text {
+  color: #fd9aed;
+}
+
+/* 작은 박스 3개 */
+.chapter4 .small-boxes {
+  display: flex;
+  align-items: center;  
+  margin: 50px 0;
+  justify-content:center;
+  gap:27px;
+}
+
+.chapter4 .small-box {
+  display: flex;
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: inherit;
+  height: 150px;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+.left p {
+  font-size:20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.small-icon {
+  width: 127px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.right01, .right02, .right03 {
+  width: 260px;
+  overflow: auto;
+  line-height: 1.4;
+}
+
+.right01, .right02, .right03 p {
+  justify-self: start;
+  font-size: 14px;
+}
+
+.right01 p {padding-top:17px;}
+.right02 p {padding-top:11px;}
+.right03 p {padding-top:9px;}
+
+
+.chapter4 .small-box:hover {
+  background-color: #74b5f1;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+
+
