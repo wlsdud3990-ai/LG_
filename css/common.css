@@ -25,6 +25,8 @@ header, footer{
   background-color:#262626;
 }
 
+section h3{display: none;}
+
 #header{
   width:100%;height:138px;
   position:fixed;top:0px;
@@ -334,18 +336,22 @@ transition:0.1s;
   margin: 7px 0;
  }
 
-
-/* 푸터 위편 SNS 고정 */
-
-
-/* SNS 버튼 (푸터 위 고정) */
 .sns-fixed { 
-  bottom: 100%;
+  position: absolute;    /* 부모 기준 위치 */
+  right: 280px;           /* 오른쪽에서 떨어진 거리 */
+  top: 405%;              /* 화면(또는 부모) 세로 중앙 */
   display: flex;
-  gap: 10px;
-  z-index: 600;
-  right: 20px;
-} 
+  gap: 9px;
+  align-items: center;    /* 텍스트와 아이콘 세로 중앙 맞춤 */
+
+}
+
+.sns-fixed .sns-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;     /* 줄바꿈 방지 */
+}
 
 .sns-fixed a {
   display: inline-flex;
@@ -353,12 +359,12 @@ transition:0.1s;
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #000; /* 버튼 배경 */
-  color: #fff;            /* 아이콘 색상 */
+  background-color: #2925f1;
+  color: #fff;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .sns-fixed a:hover {
